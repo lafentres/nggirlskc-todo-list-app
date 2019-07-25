@@ -9,9 +9,10 @@ import { Component, OnInit } from '@angular/core';
     </p>
 
     <input
+      #inputElementRef
       [value]="title"
       (keyup.enter)="changeTitle($event.target.value)">
-    <button (click)="changeTitle('Button clicked!')">
+    <button (click)="changeTitle(inputElementRef.value)">
       Save
     </button>
   `,
